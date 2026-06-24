@@ -21,6 +21,7 @@ export default function ProductDetail(){
                await productsApi.get(
 
                 `/products/${id}`
+                
 
                );
                console.log(response.data);
@@ -56,10 +57,10 @@ const images = Array.isArray(product.image)
                            import.meta.env.BASE_URL +
                             mainImage.replace("/", "")
                         }
-                    alt={product.name}
+                    alt={product.title}
                 />
                 <div className="thumbnails">
-                    {product.image.map((img, index) => (
+                    {images.map((img, index) => (
                         <img
                         key={index}
                        src={
@@ -81,7 +82,7 @@ const images = Array.isArray(product.image)
 
             <div className="detail-info">
 
-                <h1>{product.name}</h1>
+                <h1>{product.title}</h1>
 
                 <h2>{product.price} ars</h2>
 

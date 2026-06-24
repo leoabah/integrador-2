@@ -11,6 +11,7 @@ export default function Contact() {
     comments:"",
    });
 
+   
    const [errors, setErrors] = useState({});
 
    const validateField = (name,value) =>{
