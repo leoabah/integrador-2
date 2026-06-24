@@ -4,7 +4,7 @@ import { FaSearch, FaShoppingCart, FaUserCircle , FaBars, FaTimes} from 'react-i
 import { useContext } from "react"
 import { CartContext } from  "@/context/CartContext"
 import logoHeader from "@/assets/logo.png"
-import MiniCart from "./MiniCart.jsx"
+import Minicart from "./Minicart.jsx"
 
 export default function Header() {
 
@@ -75,7 +75,7 @@ export default function Header() {
               {
                 openCart && (
 
-              <MiniCart
+              <Minicart
                 setOpenCart={setOpenCart}
               />
                 )
